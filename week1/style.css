@@ -1,0 +1,255 @@
+/*about styles*/
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f5f7fa;
+}
+/* main styles */
+.main {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content {
+    background-color: #ffffff;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 80px 90px;
+}
+
+.about {
+    margin-bottom: 40px;
+}
+
+.about_name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.about_description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    color: #595959;
+    width: 400px;
+    text-transform: uppercase;
+}
+
+.projects {
+    margin-bottom: 50px;
+}
+
+.tittle {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+
+    color: #000000;
+    margin-bottom: 22px;
+}
+.project_list {
+    padding: 0;
+    margin-left: 15px;
+}
+.project_item {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #000000;
+}
+.project,
+.project_link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #595959;
+}
+.project_link {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.project_bracket {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #000000;
+}
+
+.work {
+    margin-bottom: 50px;
+}
+
+.work_wrapper {
+    padding: 0;
+}
+.work_pozition {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #000000;
+    margin: 20px;
+}
+
+.organization {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #fb6d3a;
+}
+
+.period {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+
+    color: #8b8a8a;
+    margin: 10px;
+    display: block;
+}
+.line {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+
+    color: #000000;
+}
+
+.work_list {
+    padding: 0;
+    margin-left: 15px;
+}
+
+.work_list_item {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #595959;
+}
+.education {
+    margin-bottom: 50px;
+}
+.education_place {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #fb6d3a;
+    margin-bottom: 10px;
+}
+.education_wrapper {
+    display: list-item;
+}
+.education_ocupation {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+    margin: 10px;
+}
+
+/* sidebar class */
+.sidebar {
+    background-color: #1e2939;
+    padding-top: 40px;
+    width: 370px;
+}
+.photo {
+    margin-bottom: 50px;
+    border-radius: 50%;
+    max-height: 300px;
+    max-width: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.tech-skills,
+.contacts {
+    margin: 40px;
+}
+
+.contacts {
+    margin-bottom: 50px;
+}
+.tech-skills {
+    margin-bottom: 50px;
+}
+
+.sidebar-title {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    margin-bottom: 10px;
+}
+.contact-tipe {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.contact-link {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+
+    color: #c5c5c5;
+}
+
+.tech-skills-list {
+    color: #ffffff;
+    padding: 0;
+    margin-left: 17px;
+}
+
+.soft-skills-title {
+    color: #ffffff;
+    padding: 0;
+    margin-left: 17px;
+}
+
+.tech_skills_item {
+    color: #fb6d3a;
+}
+
+.tech_skills_text {
+    color: #ffffff;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
