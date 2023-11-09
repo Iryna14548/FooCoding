@@ -1,0 +1,126 @@
+body {
+    margin: 16px;
+    font-family: sans-serif;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 32x;
+}
+
+.grid-item {
+    border: 2px solid #bdbdbd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.grid-item img {
+    width: 100%;
+}
+
+.grid-item h3 {
+    text-align: center;
+    color: white;
+    background-color: #7c7c7c;
+    padding: 16px;
+    margin-top: 0;
+}
+
+.grid-item p {
+    margin: 24px;
+}
+
+.grid-item:hover {
+    transform: scale(1.02);
+    background-color: #ececec;
+}
+
+#grid-floats {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Creates a 12 column layout */
+    grid-gap: 16px; /* This sets the gap between the grid items */
+    padding: 0;
+    list-style: none;
+    margin-bottom: 84px;
+}
+
+#grid-floats .grid-item {
+    grid-column: span 3;
+}
+
+#grid-floats .grid-item:first-child {
+    grid-column: span 6; /* Makes the first item span 6 columns */
+}
+
+@media screen and (max-width: 1024px) {
+    #grid-floats .grid-item {
+        grid-column: span 4;
+    }
+
+    #grid-floats .grid-item:first-child,
+    #grid-floats .grid-item:nth-child(2) {
+        grid-column: span 6;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #grid-floats .grid-item {
+        grid-column: span 6;
+    }
+
+    #grid-floats .grid-item:first-child {
+        grid-column: span 12;
+    }
+
+    #grid-floats .grid-item:nth-child(2) {
+        grid-column: span 6;
+    }
+}
+
+#grid-flex {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#grid-flex .grid-item {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: calc(25% - 12px);
+    flex-basis: 100%;
+}
+
+#grid-flex .grid-item:first-child {
+    max-width: calc(50% - 8px);
+}
+
+@media screen and (max-width: 1024px) {
+    #grid-flex .grid-item {
+        box-sizing: border-box;
+        margin: 0;
+        max-width: calc(33.33334% - 11px);
+        flex-basis: 100%;
+    }
+
+    #grid-flex .grid-item:first-child,
+    #grid-flex .grid-item:nth-child(2) {
+        max-width: calc(50% - 8px);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #grid-flex .grid-item {
+        box-sizing: border-box;
+        margin: 0;
+        max-width: calc(50% - 8px);
+        flex-basis: 100%;
+    }
+
+    #grid-flex .grid-item:first-child {
+        max-width: 100%;
+    }
+}
