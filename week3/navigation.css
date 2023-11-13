@@ -7,20 +7,20 @@
     align-items: center;
 }
 
-.nav__menuItem {
+.nav__menu-item {
     list-style: none;
     padding: 0.25rem;
     border: 0 solid;
 }
 
-.nav__menuItem--search {
+.nav__menu-item--search {
     display: flex;
     cursor: pointer;
     align-items: center;
     padding: 0 1rem 0 0px;
 }
 
-.nav__menuLink {
+.nav__menu-link {
     font-size: 14px;
     text-decoration: none;
     color: #a6a9b1;
@@ -35,12 +35,12 @@
     cursor: pointer;
 }
 
-.nav__menuLink:hover,
-.nav__menuLink--list:hover {
+.nav__menu-link:hover,
+.nav__menu-link-item:hover {
     color: black;
 }
 
-.has-menu > .nav__menuLink:after {
+.has-menu > .nav__menu-link:after {
     position: relative;
     pointer-events: none;
     float: right;
@@ -53,7 +53,7 @@
     border-width: 0 1px 1px 0;
 }
 
-.nav__menuItem--current {
+.nav__menu-item--current {
     position: absolute;
     top: 0;
     left: 0;
@@ -65,7 +65,7 @@
     color: black;
 }
 
-.nav__menuLink--list {
+.nav__menu-link-item {
     color: rgba(80, 86, 102, 0.75);
     letter-spacing: -1px;
     transition: color 125ms ease, box-shadow 0.25s ease;
@@ -116,11 +116,11 @@
     height: 1.5rem;
 }
 
-.nav__pdLogo--Ukraina {
+.nav__pdLogo-Ukraina {
     margin: 0;
 }
 
-.nav__menuItem--list {
+.nav__menu-item-list {
     list-style: none;
 }
 
@@ -129,7 +129,7 @@
     background: #fd3;
 }
 
-.nav__massage--global {
+.nav__massage-global {
     font-size: 13px;
     line-height: 1.25rem;
 
@@ -137,11 +137,11 @@
     margin: 0;
 }
 
-.nav__menuContainer {
+.nav__menu-container {
     display: none;
 }
 
-.nav__menuContainer--mobile {
+.nav__menu-container--mobile {
     display: flex;
     align-items: center;
     padding: 0 1rem;
@@ -158,13 +158,13 @@
 .mb-none {
     margin: 0.5rem 0;
 }
-.mb-none--hideTablet,
-.nav__massage--hideTablet {
+.mb-none-hideTablet,
+.nav__massage-hide-tablet {
     display: none;
 }
 
 @media screen and (min-width: 1024px) {
-    .nav__menuContainer {
+    .nav__menu-container {
         display: flex;
         background-color: rgba(247, 248, 248);
     }
@@ -177,18 +177,18 @@
         align-items: center;
     }
 
-    .nav__menuItem--current {
+    .nav__menu-item--current {
         position: static;
         line-height: 1.25rem;
         display: inline;
     }
 
-    .mb-none--hideTablet,
-    .nav__massage--hideTablet {
+    .mb-none-hideTablet,
+    .nav__massage-hide-tablet {
         display: flex;
     }
 
-    .nav__menuContainer--mobile {
+    .nav__menu-container--mobile {
         display: none;
     }
 
@@ -198,7 +198,7 @@
 }
 
 @media screen and (min-width: 1170px) {
-    .nav__menuLink--list {
+    .nav__menu-link-item {
         font-size: 1.125rem;
     }
 }
