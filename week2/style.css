@@ -46,35 +46,38 @@ h2 {
 }
 
 #grid-floats .grid-item {
-    grid-column: span 3;
+    grid-column: span 6;
 }
 
 #grid-floats .grid-item:first-child {
-    grid-column: span 6; /* Makes the first item span 6 columns */
+    grid-column: span 12;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 500px) {
     #grid-floats .grid-item {
         grid-column: span 4;
     }
 
-    #grid-floats .grid-item:first-child,
+    #grid-floats .grid-item:first-child {
+        grid-column: span 6;
+    }
+
     #grid-floats .grid-item:nth-child(2) {
         grid-column: span 6;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 1024px) {
     #grid-floats .grid-item {
-        grid-column: span 6;
+        grid-column: span 3;
     }
 
     #grid-floats .grid-item:first-child {
-        grid-column: span 12;
+        grid-column: span 6; /* Makes the first item span 6 columns */
     }
 
     #grid-floats .grid-item:nth-child(2) {
-        grid-column: span 6;
+        grid-column: span 3;
     }
 }
 
@@ -90,20 +93,17 @@ h2 {
 #grid-flex .grid-item {
     box-sizing: border-box;
     margin: 0;
-    max-width: calc(25% - 12px);
+    max-width: calc(50% - 8px);
     flex-basis: 100%;
 }
 
 #grid-flex .grid-item:first-child {
-    max-width: calc(50% - 8px);
+    max-width: 100%;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 500px) {
     #grid-flex .grid-item {
-        box-sizing: border-box;
-        margin: 0;
         max-width: calc(33.33334% - 11px);
-        flex-basis: 100%;
     }
 
     #grid-flex .grid-item:first-child,
@@ -112,15 +112,9 @@ h2 {
     }
 }
 
-@media screen and (max-width: 500px) {
-    #grid-flex .grid-item {
-        box-sizing: border-box;
-        margin: 0;
-        max-width: calc(50% - 8px);
-        flex-basis: 100%;
-    }
-
-    #grid-flex .grid-item:first-child {
-        max-width: 100%;
+@media screen and (min-width: 1024px) {
+    #grid-flex .grid-item,
+    #grid-flex .grid-item:nth-child(2) {
+        max-width: calc(25% - 12px);
     }
 }
