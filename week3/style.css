@@ -10,8 +10,8 @@ body {
 
 .showcase {
     display: flex;
-    gap: 16px;
-    margin: 8px 8px 0;
+    gap: 8px;
+    margin: 8px 0px 0 8px;
     overflow: auto;
     scroll-snap-type: x mandatory;
     -ms-overflow-style: none; /* IE and Edge */
@@ -57,7 +57,7 @@ body {
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
-.showcase__article--mobile-hiden {
+.showcase__article-mobile--hiden {
     display: none;
 }
 
@@ -70,13 +70,12 @@ body {
 }
 
 .showcase__advert-pane {
-    display: flex;
     position: relative;
 }
 
 .showcase__advert-pane figure {
     margin: 8px;
-    width: 100%;
+    width: calc(100% - 16px);
 }
 .showcase_advert-img {
     width: 100%;
@@ -113,8 +112,69 @@ body {
     text-decoration: none;
     margin-top: auto;
 }
+
 @media screen and (min-width: 768px) {
-    .showcase__article--mobile-hiden {
+    .showcase__article-mobile--hiden {
         display: block;
+    }
+
+    .showcase__advert-pane--mobile--hiden {
+        display: none;
+    }
+
+    .showcase {
+        display: grid;
+        grid-gap: 0.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 192px);
+        margin: 8px;
+    }
+
+    .showcase__article a {
+        height: 100%;
+    }
+
+    .grid-item {
+        display: flex; /* Use flexbox to center the image */
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* This will clip the image if it overflows */
+    }
+
+    .grid-item img {
+        width: 100%; /* This makes the image to take full width of the grid item */
+        height: 100%; /* This makes the image to take full height of the grid item */
+        object-fit: cover; /* This will cover the area without stretching */
+        /* If you want to make sure the whole image fits inside the grid item without cropping, use 'contain' instead */
+    }
+
+    .grid-item:first-child {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    .grid-item:nth-child(2) {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .grid-item.grid-item:nth-child(3) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .grid-item.grid-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .grid-item.grid-item:nth-child(5) {
+        grid-column: span 2/4;
+        grid-row: span 1;
+    }
+
+    .showcase__advert-pane figure {
+        margin: 0;
+        width: 100%;
     }
 }
