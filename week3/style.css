@@ -9,3 +9,70 @@ body {
     font-family: Graphik, sans-serif;
     font-size: 16px;
 }
+
+.email__field {
+    background-color: #64f;
+    padding: 32px;
+}
+
+.email__field-header {
+    font-size: 1.5rem;
+    color: white;
+    line-height: 1.25;
+    font-weight: bolder;
+    text-align: center;
+    padding: 24px 0 8px;
+    margin: 0;
+    font-family: auto;
+}
+
+.email__field-paragraph {
+    color: white;
+    text-align: center;
+    margin: 0 0 24px 0;
+}
+
+.email__input-wrapper {
+    display: flex;
+}
+.email__input {
+    background: hsla(0, 0%, 100%, 0.25);
+    border: transparent;
+    padding: 20px;
+    flex: 1;
+    border-radius: 6px 0 0 6px;
+}
+
+.email__input::placeholder {
+    font-size: 1rem;
+    color: rgb(214, 215, 216);
+}
+
+.email__button {
+    background-color: hsla(0, 0%, 100%, 0.25);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-right: 16px;
+    border-radius: 0 6px 6px 0;
+}
+
+.email__checkbox {
+    margin: 16px;
+}
+
+.email__checkbox-span {
+    color: rgb(226, 226, 226);
+    font-size: 12px;
+}
+
+input[type="checkbox"] {
+    /* Double-sized Checkboxes */
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+    padding: 10px;
+}
