@@ -152,6 +152,13 @@
         left: 0;
     }
 
+    .showcase__article:hover img {
+        transition-property: transform;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        transform: scale(1.03);
+    }
+
     .showcase__article:first-child {
         grid-column: span 3;
         grid-row: span 2;
