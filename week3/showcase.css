@@ -19,6 +19,7 @@
 }
 .showcase__article figure {
     margin: 0;
+    height: 100%;
 }
 
 .showcase__text {
@@ -33,6 +34,10 @@
     width: 100%;
     height: 85vw;
     object-fit: cover;
+}
+
+.showcase__shadow-wrap {
+    height: 100%;
 }
 
 .showcase__shadow-wrap::after {
@@ -118,6 +123,12 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 192px);
         margin: 8px;
+        position: relative;
+    }
+
+    .showcase__text {
+        width: calc(100% - 48px);
+        left: 0;
     }
 
     .showcase__article a {
@@ -133,9 +144,12 @@
 
     .showcase__article img {
         width: 100%; /* This makes the image to take full width of the grid item */
-        height: 100%; /* This makes the image to take full height of the grid item */
+        height: auto; /* This makes the image to take full height of the grid item */
         object-fit: cover; /* This will cover the area without stretching */
         /* If you want to make sure the whole image fits inside the grid item without cropping, use 'contain' instead */
+        position: absolute;
+        height: 100%;
+        left: 0;
     }
 
     .showcase__article:first-child {
@@ -171,5 +185,55 @@
     .showcase__advert-pane figure {
         margin: 0;
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .showcase {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(5, 120px);
+        grid-auto-rows: 1fr;
+        margin: 0 auto;
+        max-width: 1600px;
+
+        padding: 16px 24px 0;
+    }
+
+    .showcase__article:first-child {
+        grid-column: 1/5;
+        grid-row: 1 / span 3;
+    }
+
+    .showcase__article:nth-child(2) {
+        grid-column: 5/7;
+        grid-row: 1 / span 2;
+    }
+
+    .showcase__article:nth-child(3) {
+        grid-column: 5/9;
+        grid-row: 3 / span 3;
+    }
+
+    .showcase__article:nth-child(4) {
+        grid-column: 7/9;
+        grid-row: 1 / span 2;
+    }
+
+    .showcase__article:nth-child(5) {
+        grid-column: 1/5;
+        grid-row: 4 / span 2;
+    }
+
+    .showcase__grid-advert-pane .showcase__button {
+        margin-top: 16px;
+        height: auto;
+    }
+
+    .showcase__advert-pane figure {
+        margin: 0;
+        width: 100%;
+    }
+    .showcase__text-deskop {
+        font-size: 2rem;
     }
 }

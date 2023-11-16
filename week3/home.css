@@ -44,6 +44,7 @@
 
 .home__header-wrapper {
     line-height: 1.25rem;
+
     flex: 1;
 }
 
@@ -117,5 +118,9 @@
 
     .home__list-img {
         margin-right: 0;
+    }
+
+    .home__header-news h2 {
+        text-align: left;
     }
 }
