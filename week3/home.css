@@ -102,6 +102,24 @@
     transition: color 125ms ease, box-shadow 0.25s ease;
 }
 
+.news__button {
+    box-shadow: none;
+    border: 1px solid rgba(80, 86, 102, 0.25);
+    background-color: #64f;
+    border-radius: 40px;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.news__button--link {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
 @media screen and (max-width: 375px) {
     .home__item-link {
         line-height: 18px;
@@ -131,6 +149,11 @@
 
     .home__list-img {
         margin-right: 0;
+    }
+
+    .news__button {
+        max-width: 190px;
+        margin: 24px auto 0;
     }
 }
 
