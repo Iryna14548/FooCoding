@@ -12,7 +12,7 @@ body {
 
 .email__field {
     background-color: #64f;
-    padding: 32px;
+    padding: 24px;
 }
 
 .email__field-header {
@@ -29,9 +29,12 @@ body {
 .email__field-paragraph {
     color: white;
     text-align: center;
-    margin: 0 0 24px 0;
+    margin: 0 0 16px 0;
 }
 
+.email__form {
+    padding: 16px 0;
+}
 .email__input-wrapper {
     display: flex;
 }
@@ -39,8 +42,9 @@ body {
     background: hsla(0, 0%, 100%, 0.25);
     border: transparent;
     padding: 20px;
-    flex: 1;
     border-radius: 6px 0 0 6px;
+    min-width: auto;
+    width: 100%;
 }
 
 .email__input::placeholder {
@@ -56,10 +60,11 @@ body {
     font-weight: bold;
     padding-right: 16px;
     border-radius: 0 6px 6px 0;
+    margin: 0;
 }
 
 .email__checkbox {
-    margin: 16px;
+    margin: 16px 16px 16px 4px;
 }
 
 .email__checkbox-span {
@@ -75,4 +80,22 @@ input[type="checkbox"] {
     -o-transform: scale(1.5); /* Opera */
     transform: scale(1.5);
     padding: 10px;
+}
+
+.email__icons {
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    gap: 1rem;
+    transition: opacity 125ms ease;
+    fill: white;
+    padding: 24px;
+}
+
+.email__icons svg {
+    opacity: 0.5;
+}
+
+.email__icons svg:hover {
+    opacity: 1;
 }
