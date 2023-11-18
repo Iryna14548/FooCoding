@@ -12,7 +12,7 @@ body {
 }
 
 .partner {
-    padding: 96px 24px;
+    padding: 48px 24px;
 }
 .partner__info {
     text-align: center;
@@ -29,6 +29,7 @@ body {
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     color: rgba(51, 68, 85);
+    line-height: 27px;
 }
 .partner__span {
     color: #89a;
@@ -67,6 +68,10 @@ body {
 
 .partner__types-item img {
     width: 96px;
+}
+
+.partner__types-item h3 {
+    color: rgb(68 86 105);
 }
 .partner__companies {
     display: flex;
@@ -110,4 +115,72 @@ body {
 
 .partner__company:hover img {
     opacity: 0.75;
+}
+
+@media screen and (min-width: 768px) {
+    .partner {
+        padding: 56px 40px;
+    }
+
+    .partner__header {
+        font-size: 40px;
+        margin-bottom: 24px;
+    }
+
+    .partner__types {
+        margin-top: 0;
+    }
+    .partner__types-item img {
+        width: 112px;
+    }
+
+    .partner__info-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 48px;
+    }
+
+    .partner__info {
+        text-align: left;
+    }
+
+    .partner__info,
+    .partner__types {
+        flex-basis: 50%;
+    }
+
+    .partner__company {
+        flex-basis: calc(33.334% - 8px);
+    }
+
+    .partner__companies {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .partner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 56px 32px;
+    }
+
+    .partner__types-item {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .partner__types {
+        gap: 24px;
+    }
+    .partner__types-item {
+        flex-basis: calc(50% - 12px);
+    }
+
+    .partner__companies {
+        margin-top: 48px;
+        flex-wrap: nowrap;
+    }
 }
