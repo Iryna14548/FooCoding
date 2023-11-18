@@ -1,3 +1,11 @@
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+}
+
 .nav__memu-right {
     display: flex;
     flex: 1;
