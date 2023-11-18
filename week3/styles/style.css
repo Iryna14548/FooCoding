@@ -1,0 +1,13 @@
+@import "navigation.css";
+@import "showcase.css";
+@import "home.css";
+@import "email.css";
+@import "parther.css";
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Graphik, sans-serif;
+    font-size: 16px;
+}
