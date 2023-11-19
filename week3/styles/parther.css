@@ -37,6 +37,10 @@
     display: inline-block;
 }
 
+.partner__button:hover {
+    background-color: rgb(113, 82, 248);
+}
+
 .partner__types {
     display: flex;
     flex-basis: 50%;

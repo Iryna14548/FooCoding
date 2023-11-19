@@ -78,6 +78,7 @@ input[type="checkbox"] {
     transition: opacity 125ms ease;
     fill: white;
     padding: 24px;
+    cursor: pointer;
 }
 
 .email__icons svg {
