@@ -17,7 +17,7 @@ body {
     padding: 64px 32px;
 }
 
-.fotter_logo {
+.footer_logo {
     width: 160px;
     fill: white;
     cursor: pointer;
@@ -90,4 +90,29 @@ body {
     font-size: 14px;
     text-align: center;
     margin: 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer_wrap-desktop {
+        display: flex;
+        max-width: 1240px;
+        margin: 0 auto;
+    }
+
+    .footer__menu-desktop {
+        flex: 50%;
+    }
+
+    .footer__menu {
+        flex: 50%;
+        margin-top: 0;
+    }
+
+    .footer_menu-header {
+        margin-top: 0;
+    }
+
+    .footer_tagline {
+        margin-bottom: 64px;
+    }
 }
