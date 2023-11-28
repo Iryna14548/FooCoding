@@ -10,5 +10,5 @@
 <h2>JavaScript1</h2>
 <ul>
     <li><a href="https://iryna14548.github.io/FooCoding/JavaScript1/week01">JavaScript1 week01</a></li>
-    <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/week02">JavaScript1 week02</a></li>
+    <li><a href="https://iryna14548.github.io/FooCoding/JavaScript1/week02">JavaScript1 week02</a></li>
 </ul>
