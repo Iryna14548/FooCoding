@@ -66,6 +66,8 @@ console.log("The type of my variable bar is: " + typeof bar);
 console.log("The type of my variable ping is: " + typeof ping);
 console.log("The type of my variable pong is: " + typeof pong);
 
+//8.5 Now compare the types of your different variables with one another.
+
 const compareTypes = (a, b) => {
     if (typeof a === typeof b) {
         console.log("SAME TYPE");
@@ -74,10 +76,15 @@ const compareTypes = (a, b) => {
     }
 };
 
+console.log(typeof foo === typeof bar);
+console.log(typeof foo === typeof ping);
+console.log(typeof foo === typeof foo);
+console.log(typeof bar === typeof ping);
 compareTypes(foo, bar);
 compareTypes(foo, ping);
 compareTypes(foo, pong);
 compareTypes(bar, ping);
+compareTypes(bar, bar);
 
 //9. If x equals 7, and the only other statement is x = x % 3, what would be the new value of x?
 let b = 7;
