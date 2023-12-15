@@ -156,4 +156,3 @@ const addIconsToBooks = (icons) => {
 };
 
 addIconsToBooks(icons);
-S;
