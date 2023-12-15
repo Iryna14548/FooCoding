@@ -1,0 +1,52 @@
+body {
+    text-align: left;
+    max-width: fit-content;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#books {
+    display: flex;
+}
+
+.book__wrapper {
+    flex: 1;
+}
+h1,
+.header__h2 {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 1rem;
+}
+li {
+    border-top: 1px rgb(206, 205, 205) solid;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+img {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+}
+.book__title {
+    padding-top: 1.5rem;
+    color: #414040;
+    padding: 0;
+    margin-bottom: 8px;
+    margin-top: 0;
+}
+
+.book__language {
+    color: #666666;
+    margin: 0;
+}
+
+.book__author {
+    font-style: italic;
+}
