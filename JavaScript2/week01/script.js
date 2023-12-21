@@ -27,6 +27,8 @@ let createList = (items) => {
 
         newListItem.textContent = items[i];
 
+        newListItem.id = items[i];
+
         newList.appendChild(newListItem);
     }
     return newList;
@@ -127,7 +129,7 @@ createList(books);
 
 //1.7
 
-let icons = {
+let images = {
     harry_potter_chamber_secrets: './images/1.jpg',
     harry_potter_philosophers_stone: './images/9781781100219.jpg',
     harry_potter_prisoner_azkaban: './images/91VZqV0Cy8L._AC_UF1000,1000_QL80_.jpg',
@@ -142,17 +144,25 @@ let icons = {
 
 //1.8
 
-const addIconsToBooks = (icons) => {
+const addImages = (images) => {
     const listItems = document.querySelectorAll('#books li');
     for (let i = 0; i < listItems.length; i++) {
         const image = document.createElement('img');
         const alt = document.createAttribute('alt');
 
-        image.src = icons[listItems[i].id];
+        image.src = images[listItems[i].id];
         image.alt = books[listItems[i].id].title;
 
         listItems[i].prepend(image);
     }
+
+    // listItems.forEach((li) => {
+    //     const img = document.createElement('img');
+    //     const key = li.id;
+
+    //     img.src = icons[key];
+    //     li.appendChild(img);
+    // });
 };
 
-addIconsToBooks(icons);
+addImages(images);
