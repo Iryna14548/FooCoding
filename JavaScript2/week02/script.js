@@ -1,3 +1,5 @@
+'use strict';
+
 //1.1
 
 // function doubleOddNumbers(numbers) {
@@ -82,25 +84,25 @@ const tuesday = [
 //Map the tasks to durations in hours.
 //Filter out everything that took less than two hours (i.e., remove from the collection)
 
-const dayToHours = (day) => {
+const filterHour = (day) => {
     let minuteToHours = day.map((day) => {
         return day.duration / 60;
     });
     console.log('minuteToHours', minuteToHours);
 
-    let lessThanTwoHours = minuteToHours.filter((hour) => {
+    let moreThanTwoHours = minuteToHours.filter((hour) => {
         if (hour >= 2) {
             return true;
         }
     });
 
-    console.log('lessThanTwoHours', lessThanTwoHours);
+    console.log('moreThanTwoHours', moreThanTwoHours);
 
-    return lessThanTwoHours;
+    return moreThanTwoHours;
 };
 
-const mondayHours = dayToHours(monday);
-const tuesdayHours = dayToHours(tuesday);
+const mondayHours = filterHour(monday);
+const tuesdayHours = filterHour(tuesday);
 const totalHoursForAllDays = mondayHours.concat(tuesdayHours);
 
 //console.log('mondayHours', mondayHours);
@@ -121,7 +123,7 @@ const totalBillingsCost = (totalHours) => {
         (accumulator, currentValue) => accumulator + currentValue * 20,
         0
     );
-    const formatMoney = new Intl.NumberFormat('en-IE', {
+    const formatMoney = new Intl.NumberFormat('en-GB', {
         currency: 'EUR',
         style: 'currency',
         maximumFractionDigits: 2,
@@ -132,3 +134,7 @@ const totalBillingsCost = (totalHours) => {
 
 const sumOfTotalBillings = totalBillingsCost(totalHoursForAllDays);
 console.log('sumOfTotalBillings', sumOfTotalBillings);
+
+if (typeof module !== 'undefined') {
+    module.exports = { totalBillingsCost, filterHour };
+}
