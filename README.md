@@ -16,6 +16,6 @@
 
 <h2>JavaScript2</h2>
 <ul>
-    <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/week01">JavaScript2 week01</a></li>
+    <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/Week1">JavaScript2 week01</a></li>
     <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/Week2/homework">JavaScript2 week02</a></li>
 </ul>
