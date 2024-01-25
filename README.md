@@ -18,4 +18,5 @@
 <ul>
     <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/Week1">JavaScript2 week01</a></li>
     <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/Week2/homework">JavaScript2 week02</a></li>
+    <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/Week3/homework">JavaScript2 week03</a></li>
 </ul>

@@ -3,12 +3,21 @@
 const values = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c'];
 
 function makeUnique(arr) {
-  // Replace this comment and the next line with your code
-  console.log(arr);
+    const uniqueValues = [];
+
+    arr.forEach((value) => {
+        if (uniqueValues.includes(value) === false) {
+            uniqueValues.push(value);
+        }
+    });
+
+    console.log(arr);
+    return uniqueValues;
 }
 
 const uniqueValues = makeUnique(values);
 console.log(uniqueValues);
 
-// Do not change or remove anything below this line
-module.exports = makeUnique;
+if (typeof module !== 'undefined') {
+    module.exports = makeUnique;
+}
