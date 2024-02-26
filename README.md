@@ -20,3 +20,8 @@
     <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/Week2/homework">JavaScript2 week02</a></li>
     <li><a href="https://iryna14548.github.io/FooCoding/JavaScript2/Week3/homework">JavaScript2 week03</a></li>
 </ul>
+<h2>NodeJS</h2>
+<ul>
+    <li><a href="https://iryna14548.github.io/FooCoding/NodeJS/Week1">Node JS week01</a></li>
+    
+</ul>
