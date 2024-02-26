@@ -1,9 +1,53 @@
 'use strict';
 
 import { defineRoute, router } from './utils/define-route.js';
+import fs from 'fs/promises';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const dataDirectory = path.join(__dirname, 'data');
+const usersFilePath = path.join(dataDirectory, 'users.json');
+const postsFilePath = path.join(dataDirectory, 'posts.json');
 
 let users = [];
 let posts = [];
+
+async function loadDataFromFile(filePath, defaultValue) {
+    try {
+        const data = await fs.readFile(filePath, 'utf8');
+        return JSON.parse(data);
+    } catch (error) {
+        if (error.code === 'ENOENT') {
+            // File doesn't exist, return default value (usually an empty array)
+            return defaultValue;
+        } else {
+            throw error; // Rethrow error if it's not a 'file not found' error
+        }
+    }
+}
+
+async function saveDataToFile(filePath, data) {
+    await fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf8');
+}
+
+async function initializeData() {
+    users = await loadDataFromFile(usersFilePath, []);
+    posts = await loadDataFromFile(postsFilePath, []);
+}
+
+// Call initializeData at app startup
+initializeData()
+    .then(() => {
+        console.log('Data loaded successfully.');
+        console.log('users', users);
+    })
+    .catch((error) => {
+        console.error('Failed to load data:', error);
+    });
 
 function getUniqueId(collection) {
     let id = 0;
@@ -88,11 +132,13 @@ defineRoute('POST', '/users', (req, res) => {
             const user = { id: getUniqueId(users), ...userData };
             users.push(user);
 
+            saveDataToFile(usersFilePath, users);
+
             res.setHeader('Content-Type', 'application/json');
             res.statusCode = 200;
             res.end(
                 JSON.stringify({
-                    body: user,
+                    user: user,
                 })
             );
         } else {
@@ -124,6 +170,8 @@ defineRoute('PATCH', '/users', (req, res) => {
                 }
                 return user;
             });
+
+            saveDataToFile(usersFilePath, users);
 
             res.setHeader('Content-Type', 'application/json');
             res.statusCode = 200;
@@ -158,6 +206,7 @@ defineRoute('DELETE', '/users/:id', (req, res) => {
 
         if (userToDelete) {
             users = users.filter((user) => user.id !== userId);
+            saveDataToFile(usersFilePath, users);
 
             res.setHeader('Content-Type', 'application/json');
             res.statusCode = 200;
@@ -276,6 +325,7 @@ defineRoute('POST', '/posts', (req, res) => {
 
             posts.push(post);
 
+            saveDataToFile(postsFilePath, posts);
             res.setHeader('Content-Type', 'application/json');
             res.statusCode = 200;
             res.end(
@@ -312,6 +362,8 @@ defineRoute('PATCH', '/posts', (req, res) => {
                 }
                 return post;
             });
+
+            saveDataToFile(postsFilePath, posts);
 
             res.setHeader('Content-Type', 'application/json');
             res.statusCode = 200;
@@ -350,6 +402,7 @@ defineRoute('DELETE', '/posts/:id', (req, res) => {
                     return posts;
                 }
             });
+            saveDataToFile(postsFilePath, posts);
 
             res.setHeader('Content-Type', 'application/json');
             res.statusCode = 200;

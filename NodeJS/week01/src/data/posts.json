@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "userId": 2,
+        "content": "Node.js is an open source server environment"
+    },
+    {
+        "id": 3,
+        "userId": 3,
+        "content": "Node.js runs on various platforms (Windows, Linux, Unix, Mac OS X, etc.)."
+    },
+    {
+        "id": 4,
+        "userId": 2,
+        "content": "React lets you build user interfaces out of individual pieces called components"
+    }
+]
