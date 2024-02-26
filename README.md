@@ -22,6 +22,6 @@
 </ul>
 <h2>NodeJS</h2>
 <ul>
-    <li><a href="https://https://iryna14548.github.io/FooCoding/NodeJS/week01/">Node JS week01</a></li>
+    <li><a href="https://iryna14548.github.io/FooCoding/NodeJS/week01">Node JS week01</a></li>
     
 </ul>
