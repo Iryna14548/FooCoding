@@ -8,6 +8,8 @@ import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+//console.log('__filename', __filename);
+//console.log('__dirname', __dirname);
 
 const dataDirectory = path.join(__dirname, 'data');
 const usersFilePath = path.join(dataDirectory, 'users.json');
