@@ -1,0 +1,6 @@
+Total salary: 700044052
+Average salary: 70004.4052
+Minimum salary: doctor have the minimum salary 40004,developer have the minimum salary 40019,police officer have the minimum salary 40049,firefighter have the minimum salary 40001,worker have the minimum salary 40015
+Minimum age: 20
+Maximum age: 70
+Maximum salary: doctor have the minimum salary 99998,developer have the minimum salary 99987,police officer have the minimum salary 99984,firefighter have the minimum salary 99987,worker have the minimum salary 99983
