@@ -1,5 +1,6 @@
 const fs = require('fs/promises');
 
+//Loading data based on file path
 async function loadDataFromFile(filePath, defaultValue) {
     try {
         const data = await fs.readFile(filePath, 'utf8');
@@ -14,6 +15,7 @@ async function loadDataFromFile(filePath, defaultValue) {
     }
 }
 
+//Saving data to file. If file doesn't exist then it will create a new file based on the file path.
 async function saveDataToFile(filePath, data) {
     await fs.writeFile(filePath, JSON.stringify(data, null, 4), 'utf8');
 }

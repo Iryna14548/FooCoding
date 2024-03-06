@@ -7,12 +7,13 @@ Requirements:
 -   Use Express.js to create a RESTful API for managing Todos.
 -   Implement CRUD operations (Create, Read, Update, Delete) for Todos.
 -   Store the Todos data in the file system using Node.js file system module (fs).
+-   Organize your code in a structured manner, separating concerns where appropriate (e.g., routes, controllers, models).
 
-*   Organize your code in a structured manner, separating concerns where appropriate (e.g., routes, controllers, models).
 *   Ensure error handling for various scenarios, such as invalid requests, missing data, etc (extra points for implementing a validation middleware with some validation library like [TypeBox](https://www.npmjs.com/package/@sinclair/typebox), [Joi](https://www.npmjs.com/package/joi), or [Zod](https://www.npmjs.com/package/zod)).
-*   Include appropriate comments to explain the functionality of each part of your code.
-*   Implement basic validation to ensure that data passed to the API endpoints meets expected formats.
-*   Add appropriate status codes and error messages in your API responses.
+
+-   Include appropriate comments to explain the functionality of each part of your code.
+-   Implement basic validation to ensure that data passed to the API endpoints meets expected formats.
+-   Add appropriate status codes and error messages in your API responses.
 
 ## Create a README.md file that includes:
 
