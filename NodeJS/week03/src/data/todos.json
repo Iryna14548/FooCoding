@@ -1,12 +1,22 @@
 [
     {
         "id": "9b2deb4d-3b7d-4bad-9bdd-2b0d7b3dcb7d",
-        "task": "Fry the bacon",
+        "task": "Boil eggs and clean them",
         "isDone": false
     },
     {
         "id": "29534d9b-2717-49a0-aafb-3750b2c55b17",
         "task": "Boil potatoes",
+        "isDone": false
+    },
+    {
+        "id": "f4a28dc4-f476-4614-8c6b-b4ad94d38216",
+        "task": "Boil potatos",
+        "isDone": false
+    },
+    {
+        "id": "adac63b2-1dcf-4d81-bd74-1a1643ab1634",
+        "task": "Boil potatos",
         "isDone": false
     }
 ]
