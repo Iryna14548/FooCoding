@@ -1,0 +1,12 @@
+[
+    {
+        "id": "9b2deb4d-3b7d-4bad-9bdd-2b0d7b3dcb7d",
+        "task": "Fry the bacon",
+        "isDone": false
+    },
+    {
+        "id": "29534d9b-2717-49a0-aafb-3750b2c55b17",
+        "task": "Boil potatoes",
+        "isDone": false
+    }
+]
