@@ -24,4 +24,5 @@
 <ul>
     <li><a href="https://iryna14548.github.io/FooCoding/NodeJS/week01">Node JS week01</a></li>
     <li><a href="https://iryna14548.github.io/FooCoding/NodeJS/week02">Node JS week02</a></li>
+    <li><a href="https://iryna14548.github.io/FooCoding/NodeJS/week03">Node JS week03</a></li>
 </ul>

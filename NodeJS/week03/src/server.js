@@ -6,7 +6,7 @@ const app = express();
 
 const port = 3000;
 
-//setting up server and initializing routes
+//Setting up server and initializing routes
 const todosRouter = require('./routes/todosRoutes');
 app.use(express.json());
 app.use('/todos', todosRouter);
