@@ -1,8 +1,15 @@
-1. # Starting the Server
+1. # Todos API Application
 
-Start the server by running `npm start` in the terminal. This will launch the application on `http://localhost:3000/` by default.
+his is simple Todos API that allows users to perform CRUD (Create, Read, Update, Delete) operations on todos stored in the file system.
 
-2. # Todo Application API Documentation
+2. # How to Run the Application
+
+-   **Prerequisites**:Ensure that Node.js is installed on your system. The application has been developed and tested with Node.js version `v18.12.1`. You can download it from [Node.js official website](https://nodejs.org/).
+-   **Clone the Repository**: Clone or download the application to your local machine.
+-   **Install Dependencies**: Navigate to the project directory and run `npm install` to install all the necessary dependencies.
+-   **Start the Application**: Run the script using Node.js with the command `npm start`. This will launch the application on `http://localhost:3000/` by default.
+
+3. ## Todo Application API Documentation
 
 ## Overview
 
@@ -114,19 +121,3 @@ In case of errors, the API responds with the appropriate HTTP status code and a 
 ## Validation
 
 The API performs validations on incoming requests. If a request fails validation, it will respond with a `400 Bad Request` status code and details about the validation errors.
-
-3. ## Additional Notes and Considerations
-
-### Running the Application
-
-#### Environment Setup
-
-Ensure that Node.js is installed on your system. The application has been developed and tested with Node.js version `v18.12.1`. You can download it from [Node.js official website](https://nodejs.org/).
-
-#### Dependencies
-
-After cloning the repository, navigate to the project directory and run `npm install` to install all the necessary dependencies.
-
-#### Starting the Server
-
-Start the server by running `npm start` in the terminal. This will launch the application on `http://localhost:3000/` by default.
