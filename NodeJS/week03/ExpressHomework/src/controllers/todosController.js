@@ -13,6 +13,20 @@ async function getTodos(req, res) {
     }
 }
 
+//Get todo by ID
+async function getTodosById(req, res) {
+    try {
+        const todo = await todosModel.getTodosById(req.params.id);
+        if (todo) {
+            res.json({ todo });
+        } else {
+            res.status(404).json({ error: 'Todo not found' });
+        }
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+}
+
 //Add new Todo to list
 async function addTodo(req, res) {
     try {
@@ -35,7 +49,7 @@ async function addTodo(req, res) {
 async function updateTodo(req, res) {
     try {
         const updateToDoData = req.body;
-        if (!updateToDoData.id || !updateToDoData.task || typeof updateToDoData.isDone !== 'boolean') {
+        if (!updateToDoData.task || typeof updateToDoData.isDone !== 'boolean') {
             return res.status(400).json({ error: 'ID, Task, and isDone are required' });
         }
         await todosModel.updateTodo(updateToDoData);
@@ -61,6 +75,7 @@ async function deleteTodo(req, res) {
 
 module.exports = {
     getTodos,
+    getTodosById,
     addTodo,
     updateTodo,
     deleteTodo,

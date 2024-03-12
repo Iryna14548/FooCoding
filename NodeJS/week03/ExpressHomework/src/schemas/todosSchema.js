@@ -6,13 +6,27 @@ const baseTodoSchema = Joi.object({
     isDone: Joi.boolean().required(),
 });
 
+// Schema for ID validation - for GET requests to validate the ID parameter
+const idValidationSchema = Joi.object({
+    id: Joi.string().guid({ version: 'uuidv4' }).required(),
+});
+
 // Schema for POST requests - no ID needed as it's generated on the server
 const todoPostSchema = baseTodoSchema.append({});
 
 // Schema for PATCH requests - ID is required
 const todoPatchSchema = baseTodoSchema.append({
-    id: Joi.string().guid({ version: 'uuidv4' }),
+    id: Joi.string().guid({ version: 'uuidv4' }).required(),
 });
+
+// Middleware for POST validation
+const validateGetTodoById = (req, res, next) => {
+    const { error } = idValidationSchema.validate({ id: req.params.id });
+    if (error) {
+        return res.status(400).json(error);
+    }
+    next();
+};
 
 // Middleware for POST validation
 const validatePostTodo = (req, res, next) => {
@@ -32,4 +46,4 @@ const validatePatchTodo = (req, res, next) => {
     next();
 };
 
-module.exports = { validatePostTodo, validatePatchTodo };
+module.exports = { validateGetTodoById, validatePostTodo, validatePatchTodo };

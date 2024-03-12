@@ -1,7 +1,7 @@
 [
     {
         "id": "9b2deb4d-3b7d-4bad-9bdd-2b0d7b3dcb7d",
-        "task": "Boil eggs",
+        "task": "Boil eggs and clean them",
         "isDone": false
     },
     {
@@ -12,21 +12,6 @@
     {
         "id": "f4a28dc4-f476-4614-8c6b-b4ad94d38216",
         "task": "Boil carrots",
-        "isDone": false
-    },
-    {
-        "id": "a786279d-99d9-4aa7-83fb-7ed02e9e5baa",
-        "task": "Boil potatos",
-        "isDone": false
-    },
-    {
-        "id": "8b5ffd1d-7849-4c08-a58e-45bd74a421f7",
-        "task": "Clean house",
-        "isDone": false
-    },
-    {
-        "id": "0f86c386-bc2d-41df-b8e1-4ee92e2fa0b4",
-        "task": "testTwo",
         "isDone": false
     }
 ]

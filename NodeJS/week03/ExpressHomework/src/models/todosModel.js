@@ -19,6 +19,11 @@ async function getTodos() {
     return todos;
 }
 
+// Getting Todo by ID
+async function getTodosById(id) {
+    return todos.find((todo) => todo.id === id);
+}
+
 //Adding a new Todo
 async function addTodo(todo) {
     todos.push(todo);
@@ -51,6 +56,7 @@ async function deleteTodo(id) {
 module.exports = {
     initializeData,
     getTodos,
+    getTodosById,
     addTodo,
     updateTodo,
     deleteTodo,
