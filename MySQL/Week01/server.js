@@ -32,8 +32,17 @@ connection.connect((err) => {
             query: 'SELECT Name FROM city WHERE Population BETWEEN 500000 AND 1000000;',
         },
         {
-            question: "4. What's the name of all the countries on the continent ‘Europe’?",
-            query: "SELECT Name FROM country WHERE Continent = 'Europe';",
+            question: "4. What's the name of all capitals on the continent ‘Europe’?",
+            query: `
+              SELECT 
+                city.Name AS CapitalName 
+              FROM 
+                city 
+              JOIN 
+                country ON city.ID = country.Capital 
+              WHERE 
+                country.Continent = 'Europe';
+        `,
         },
         {
             question: '5. List all the countries in the descending order of their surface areas.',
