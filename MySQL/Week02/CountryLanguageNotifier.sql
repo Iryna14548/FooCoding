@@ -1,5 +1,5 @@
--- Step 1: Create the warning log table
-CREATE TABLE warning_log (
+-- Step 1: Create the warning log table (Optional)
+CREATE TABLE IF NOT EXISTS warning_log (
     id INT AUTO_INCREMENT PRIMARY KEY,
     message VARCHAR(255),
     log_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -14,13 +14,23 @@ AFTER INSERT ON countrylanguage
 FOR EACH ROW
 BEGIN
   DECLARE language_count INT;
+  DECLARE warning_message VARCHAR(255);
 
+  -- Count the number of languages for the country
   SELECT COUNT(*) INTO language_count
   FROM countrylanguage
   WHERE CountryCode = NEW.CountryCode;
 
+  -- Check if the count is 10 or more
   IF language_count >= 10 THEN
-    INSERT INTO warning_log (message) VALUES (CONCAT('The country ', NEW.CountryCode, ' has 10 or more languages'));
+    -- Set the warning message
+    SET warning_message = CONCAT('The country ', NEW.CountryCode, ' has 10 or more languages');
+    
+    -- Issue the warning
+    SIGNAL SQLSTATE '01000' SET MESSAGE_TEXT = warning_message;
+
+    -- Optionally log the warning to the warning_log table
+    INSERT INTO warning_log (message) VALUES (warning_message);
   END IF;
 END //
 
@@ -35,7 +45,10 @@ GROUP BY CountryCode;
 
 -- Insert a new language to trigger the warning
 INSERT INTO countrylanguage (CountryCode, Language, IsOfficial, Percentage)
-VALUES ('CAN', 'Lange11', 'F', 1.0);
+VALUES ('CAN', 'Lange14', 'F', 1.0);
 
--- Check the warning log table
-SELECT * FROM warning_log;
+-- Check for warnings
+SHOW WARNINGS;
+
+-- Optionally check the warning log table if logging is enabled
+SELECT message, log_time FROM warning_log;
