@@ -26,8 +26,9 @@ BEGIN
     -- Set the warning message
     SET warning_message = CONCAT('The country ', NEW.CountryCode, ' has 10 or more languages');
     
-    -- Issue the warning
-    SIGNAL SQLSTATE '01000' SET MESSAGE_TEXT = warning_message;
+    -- This code is used to signal a generic, user-defined error.
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = warning_message;
+
 
     -- Optionally log the warning to the warning_log table
     INSERT INTO warning_log (message) VALUES (warning_message);
@@ -45,10 +46,7 @@ GROUP BY CountryCode;
 
 -- Insert a new language to trigger the warning
 INSERT INTO countrylanguage (CountryCode, Language, IsOfficial, Percentage)
-VALUES ('CAN', 'Lange14', 'F', 1.0);
-
--- Check for warnings
-SHOW WARNINGS;
+VALUES ('CAN', 'Lange15', 'F', 1.0);
 
 -- Optionally check the warning log table if logging is enabled
 SELECT message, log_time FROM warning_log;
